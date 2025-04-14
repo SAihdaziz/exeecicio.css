@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços Automotivos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1f1f1f;
+      color: #fff;
+      padding: 1rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    /* Menu Hamburguer */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #00ffaa;
+      text-decoration: none;
+      margin: 0.5rem 0;
+    }
+
+    .hero-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      padding: 2rem 1rem;
+      gap: 2rem;
+    }
+
+    .hero-images img {
+      max-width: 100%;
+      width: 450px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ff99;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .menu-toggle {
+        display: none !important;
+      }
+    }
+
+    .service {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .service img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .service-content h3 {
+      font-size: 1.5rem;
+      color: #00ffaa;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      margin-top: 3rem;
+    }
+
+    .contact a {
+      background: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 15px rgba(0, 255, 100, 0.4);
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact a:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #1f1f1f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1>Serviços Automotivos em Domicílio</h1>
+    <nav id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Imagens do topo -->
+  <div class="hero-images">
+    <img src="image.png" alt="carro">
+    <img src="image.png3.jpg" alt="mecanico">
+  </div>
+
+  <!-- Sobre nós -->
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Atendemos em domicílio com serviços rápidos e de confiança. Nossa missão é cuidar do seu carro com a mesma atenção que você teria indo até a oficina — mas com muito mais comodidade!</p>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1615873968403-89fdbf84c2a1" alt="Troca de Óleo">
+        <div class="service-content">
+          <h3>Troca de Óleo</h3>
+          <p>Trabalhamos com os principais tipos de óleo: mineral, semissintético e sintético, sempre seguindo a especificação do fabricante.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1600369671984-101bd93b5fd6" alt="Manutenção Preventiva">
+        <div class="service-content">
+          <h3>Manutenção Preventiva</h3>
+          <p>Verificamos itens essenciais como freios, filtros, bateria e mais. Uma manutenção periódica evita grandes problemas no futuro.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1621872606437-ec9c70babc50" alt="Serviços Elétricos">
+        <div class="service-content">
+          <h3>Serviços Elétricos</h3>
+          <p>Diagnóstico e reparo de sistemas elétricos como faróis, lanternas, sistema de carga e partida.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1571607387400-2d93c2a1b8f9" alt="Sistemas Eletrônicos">
+        <div class="service-content">
+          <h3>Eletrônica Embarcada</h3>
+          <p>Leitura de scanner, sensores, injeção eletrônica, ABS e módulos de controle. Atuação com equipamentos de precisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="contact" id="contato">
+    <h2>Entre em Contato</h2>
+    <a href="https://wa.me/5500000000000" target="_blank">Agendar pelo WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Serviços Automotivos em Domicílio. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
